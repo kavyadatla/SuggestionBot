@@ -6,7 +6,7 @@ using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using Newtonsoft.Json;
 
-[LuisModel("326d6bbc-2659-40c5-9b72-dc774088ef6d", "f09fba0b852143f5a46136109125f680")]
+[LuisModel("", "")]
 [Serializable]
 
 public class MyLuisDialog : LuisDialog<object>
