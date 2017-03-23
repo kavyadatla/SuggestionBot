@@ -29,21 +29,21 @@ public class MyLuisDialog : LuisDialog<object>
     [LuisIntent("FavouriteRestaurants")]
     public async Task FavouriteRestaurants(IDialogContext context, LuisResult luisResult)
     {
-        string message = "Pok-Pok " + "Thai Tom " + "Panda Express";
+        string message = "Pok-Pok, " + "Thai Tom, " + "Panda Express";
         await context.PostAsync(message);
         context.Wait(this.MessageReceived);
     }
     [LuisIntent("Sightseeing")]
     public async Task Sightseeing(IDialogContext context, LuisResult luisResult)
     {
-        string message = "Space Needle " + "Seattle Aquarium " + "Alki Beach";
+        string message = "Space Needle, " + "Seattle Aquarium, " + "Alki Beach";
         await context.PostAsync(message);
         context.Wait(this.MessageReceived);
     }
     [LuisIntent("malls")]
     public async Task malls(IDialogContext context, LuisResult luisResult)
     {
-        string message = "CrossRoads Mall " + "Bellevue Square Mall";
+        string message = "CrossRoads Mall, " + "Bellevue Square Mall";
         await context.PostAsync(message);
         context.Wait(this.MessageReceived);
     }
