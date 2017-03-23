@@ -15,7 +15,14 @@ public class MyLuisDialog : LuisDialog<object>
     [LuisIntent("None")]
     public async Task None(IDialogContext context, LuisResult luisResult)
     {
-        string message = "Sorry, I have limited suggestions";
+        string message = "Sorry, I have limited suggestions. I can help you with Restaurants, SightSeeing places and Malls";
+        await context.PostAsync(message);
+        context.Wait(this.MessageReceived);
+    }
+    [LuisIntent("greeting")]
+    public async Task greeting(IDialogContext context, LuisResult luisResult)
+    {
+        string message = "Hello from Suggestion Bot. You can ask me about Restaurants, SightSeeing places and Malls ";
         await context.PostAsync(message);
         context.Wait(this.MessageReceived);
     }
