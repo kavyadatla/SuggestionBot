@@ -33,8 +33,8 @@ public class MyLuisDialog : LuisDialog<object>
         await context.PostAsync(message);
         context.Wait(this.MessageReceived);
     }
-    [LuisIntent("SightSeeing")]
-    public async Task SightSeeing(IDialogContext context, LuisResult luisResult)
+    [LuisIntent("Sightseeing")]
+    public async Task Sightseeing(IDialogContext context, LuisResult luisResult)
     {
         string message = "Space Needle " + "Seattle Aquarium " + "Alki Beach";
         await context.PostAsync(message);
